@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+
+body {
+  font-family: 'Work Sans';
+  font-size: 18px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  width: 100%;
+}
