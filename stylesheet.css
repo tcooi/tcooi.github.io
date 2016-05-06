@@ -45,6 +45,10 @@ p.hello {
   width: 100%;
 }
 
+#pic {
+  filter: blur(100px) invert(100%);
+}
+
 .info {
   display: flex;
   flex-direction: column;
