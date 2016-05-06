@@ -13,13 +13,36 @@
 
       ga('create', 'UA-75704372-1', 'auto');
       ga('send', 'pageview');
+    </script>
+    <script>
+      window.onload = function() {
+        var main = document.getElementById('main');
+        var pic = document.getElementById('pic');
 
+        main.addEventListener('mousemove', function(event) {
+          var x = event.clientX;
+          var y = event.clientY;
+
+          var width = window.innerWidth;
+          var height = window.innerHeight;
+
+          var center = Math.max(0, Math.floor(Math.abs(x-(width/2)))-40 + Math.floor(Math.abs(y-(height/2)))-40);
+
+          pic.style.webkitFilter = 'blur('+center/10+'px) invert('+center/10+'%)';
+        });
+
+      }
     </script>
   </head>
   <body>
-    <div class="header">
-      <div>
+    <div id="main">
+      <div id='pic'>
+        <img src="p.png" alt=":|" />
+      </div>
+      <div class="info">
         <p class="hello">hello</p>
+        <p><a href="https://www.flickr.com/photos/chao_chao/">flickr</a><br>
+        <a href="https://github.com/tcooi">github</a></p>
       </div>
     </div>
   </body>
